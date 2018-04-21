@@ -19,6 +19,7 @@
         <mapping class="main.java.app.cart.CartDetail"/>
         <mapping class="main.java.app.order.Order"/>
         <mapping class="main.java.app.order.OrderDetail"/>
+        <mapping class="main.java.app.order.OrderHistory"/>
         <mapping class="main.java.app.service.Service"/>
         <mapping class="main.java.app.doctors.Doctor"/>
     </session-factory>

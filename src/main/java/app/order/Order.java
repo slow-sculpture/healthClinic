@@ -1,6 +1,7 @@
 package main.java.app.order;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import main.java.app.user.User;
 
@@ -12,6 +13,7 @@ import java.util.Set;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class Order implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,4 +28,7 @@ public class Order implements Serializable {
     @OneToMany (mappedBy = "order", cascade = CascadeType.ALL,
     fetch = FetchType.EAGER)
     Set<OrderDetail> orderDetailSet;
+    @OneToMany (mappedBy = "order", cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER)
+    Set<OrderHistory> orderHistorySet;
 }
