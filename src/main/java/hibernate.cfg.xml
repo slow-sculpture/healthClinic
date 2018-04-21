@@ -14,7 +14,12 @@
 
   		<property name="hibernate.hbm2ddl.auto">update</property>
 
-       <!-- <mapping class="hibernate.shop.product.Product"/>
--->
+        <mapping class="main.java.app.user.User"/>
+        <mapping class="main.java.app.cart.Cart"/>
+        <mapping class="main.java.app.cart.CartDetail"/>
+        <mapping class="main.java.app.order.Order"/>
+        <mapping class="main.java.app.order.OrderDetail"/>
+        <mapping class="main.java.app.service.Service"/>
+        <mapping class="main.java.app.doctors.Doctor"/>
     </session-factory>
 </hibernate-configuration>

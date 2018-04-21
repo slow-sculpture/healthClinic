@@ -1,17 +1,19 @@
 package main.java.app.user;
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import main.java.app.cart.Cart;
+import main.java.app.order.Order;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(exclude = "orderSet")
 public class User implements Serializable{
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -22,4 +24,9 @@ public class User implements Serializable{
     String firstName;
     String lastName;
 
+    //DB relations
+    @OneToOne(mappedBy = "user")
+    Cart cart;
+    @OneToMany(mappedBy = "user")
+    Set<Order> orderSet;
 }
