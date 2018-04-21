@@ -22,6 +22,8 @@ public class Doctor implements Serializable {
     private String firstName;
     private String lastName;
     private String specialization;
+    //todo
+    //date and time of work
 
     //DB relations
     @OneToMany
