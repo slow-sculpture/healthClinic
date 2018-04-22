@@ -1,8 +1,6 @@
 package main.java.app.user;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import main.java.app.cart.Cart;
 import main.java.app.order.Order;
 
@@ -14,6 +12,8 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(exclude = "orderSet")
+@Data
+@Builder
 public class User implements Serializable{
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
