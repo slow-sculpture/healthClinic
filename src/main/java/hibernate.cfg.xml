@@ -22,5 +22,6 @@
         <mapping class="main.java.app.order.OrderHistory"/>
         <mapping class="main.java.app.service.Service"/>
         <mapping class="main.java.app.doctors.Doctor"/>
+        <mapping class="main.java.app.doctors.AddmissionTime"/>
     </session-factory>
 </hibernate-configuration>

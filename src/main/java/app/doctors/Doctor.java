@@ -1,8 +1,6 @@
 package main.java.app.doctors;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import main.java.app.service.Service;
 
 import javax.persistence.*;
@@ -12,7 +10,9 @@ import java.util.Set;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(exclude = "serviceSet")
+@EqualsAndHashCode(exclude = {"serviceSet", "addmissionTimeSet"})
+@Data
+@Builder
 public class Doctor implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,43 +22,12 @@ public class Doctor implements Serializable {
     private String firstName;
     private String lastName;
     private String specialization;
-    //todo
-    //date and time of work
 
     //DB relations
-    @OneToMany
+    @OneToMany(mappedBy = "doctor", fetch = FetchType.EAGER)
     Set<Service> serviceSet;
+    @OneToMany (mappedBy = "doctor")
+    Set<AddmissionTime> addmissionTimeSet;
     //
 
-    public String getAcademicTitle() {
-        return academicTitle;
-    }
-
-    public void setAcademicTitle(String academicTitle) {
-        this.academicTitle = academicTitle;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getSpecialization() {
-        return specialization;
-    }
-
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
-    }
 }
