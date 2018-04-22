@@ -51,7 +51,7 @@ public class RegisterServlet extends HttpServlet {
             UserRepo.save(user);
         }
         //redirect to login page
-        //request.getRequestDispatcher("/login.jsp").forward(request,response);
+        request.getRequestDispatcher("/login.jsp").forward(request,response);
     }
 
 
