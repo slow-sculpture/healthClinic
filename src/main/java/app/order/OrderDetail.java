@@ -8,6 +8,8 @@ import main.java.app.service.Service;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,7 +20,9 @@ public class OrderDetail implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @ManyToOne (cascade = CascadeType.ALL)
+    BigDecimal price;
+
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn
     Service service;
     @ManyToOne(cascade = CascadeType.ALL)

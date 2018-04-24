@@ -8,6 +8,7 @@ import main.java.app.service.Service;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 @Entity
 @NoArgsConstructor
@@ -18,6 +19,9 @@ public class CartDetail implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    BigDecimal amount;
+    BigDecimal price;
 
     //DB relations
     @ManyToOne

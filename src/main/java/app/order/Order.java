@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 @Entity
+@Table(name = "orders")
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(exclude = {"orderDetailSet","orderHistorySet"})
