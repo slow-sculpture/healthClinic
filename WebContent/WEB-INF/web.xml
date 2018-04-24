@@ -4,17 +4,21 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
     <display-name>healthClinic</display-name>
-    <!--
     <servlet>
       <servlet-name>LoginServlet</servlet-name>
-      <servlet-class>hibernate.shop.servlets.LoginServlet</servlet-class>
+      <servlet-class>main.java.app.servlets.LoginServlet</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>main.java.app.servlets.RegisterServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
       <servlet-name>LoginServlet</servlet-name>
       <url-pattern>/login</url-pattern>
     </servlet-mapping>
- -->
-
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
 </web-app>

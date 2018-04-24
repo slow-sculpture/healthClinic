@@ -29,7 +29,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('https://www.rejuvenategeorgia.com/wp-content/uploads/2013/09/Chimera-Medical-Services-5.jpg');">
 			<div class="wrap-login100 p-t-190 p-b-30">
-				<form class="login100-form validate-form" method="post" action="/login" role="login">
+				<form class="login100-form validate-form" method="post" action="/register" role="register">
 					<div class="login100-form-avatar">
 						<img src="assets\images\logo.png" alt="logo">
 					</div>
@@ -38,6 +38,21 @@
 						Medical + Clinic
 					</span>
 
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "First name is required">
+						<input class="input100" type="text" name="firstName" id="firstName" placeholder="First name">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Last name is required">
+						<input class="input100" type="text" name="lastName" id="lastName" placeholder="Last name">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
 
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Email is required">
 						<input class="input100" type="email" name="email" id="email" placeholder="Email">
@@ -55,18 +70,21 @@
 						</span>
 					</div>
 
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password confirmation is required">
+						<input class="input100" type="password" name="confirmPass" id="confirmPass" placeholder="Password confirmation">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+
 					<div class="container-login100-form-btn p-t-10">
 						<button class="login100-form-btn">
-							Login
+							Register
 						</button>
 					</div>
 
-					<div class="text-center w-full p-t-25 p-b-230">
-						<a class="txt1" href="/register.jsp">
-							Create new account
-							<i class="fa fa-long-arrow-right"></i>
-						</a>
-					</div>
+
 
 
 				</form>

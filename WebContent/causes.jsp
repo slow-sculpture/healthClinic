@@ -94,7 +94,7 @@
                   <ul class="nav navbar-nav">
 
                     <li><a href="index.jsp">HOME</a></li>
-                    <li><a href="about.jsp">ABOUT</a></li>
+                    <li><a href="doctors.jsp">ABOUT</a></li>
                     <li class="has-child"><a class="is-active" href="#">CAUSES</a>
 
                       <ul class="submenu">
