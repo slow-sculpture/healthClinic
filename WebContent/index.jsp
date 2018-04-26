@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -47,15 +48,15 @@
 
             <div class="item active">
 
-              <img src="assets/images/slider/home-slider-1.jpg" alt="">
+              <img src="assets/images/firstimg.jpg" alt="">
 
               <div class="container">
 
                 <div class="carousel-caption">
 
-                  <h2 class="carousel-title bounceInDown animated slow">Because they need your help</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow ">Do not let them down</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                  <h2 class="carousel-title bounceInDown animated slow">Welcome to Medical + Clinic</h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow ">Join thousands of pleased patients</h4>
+
 
                 </div> <!-- /.carousel-caption -->
 
@@ -66,15 +67,14 @@
 
             <div class="item ">
 
-              <img src="assets/images/slider/home-slider-2.jpg" alt="">
+              <img src="assets/images/doctors.jpg" alt="">
 
               <div class="container">
 
                 <div class="carousel-caption">
 
-                  <h2 class="carousel-title bounceInDown animated slow">Together we can improve their lives</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow"> So let's do it !</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                  <h2 class="carousel-title bounceInDown animated slow">Top qualified personnel</h2>
+                  <h4 class="carousel-subtitle bounceInUp animated slow">We provide specialists in many fields at your service</h4>
 
                 </div> <!-- /.carousel-caption -->
 
@@ -85,23 +85,6 @@
 
 
 
-            <div class="item ">
-
-              <img src="assets/images/slider/home-slider-3.jpg" alt="">
-
-              <div class="container">
-
-                <div class="carousel-caption">
-
-                  <h2 class="carousel-title bounceInDown animated slow" >A penny is a lot of money, if you have not got a penny.</h2>
-                  <h4 class="carousel-subtitle bounceInUp animated slow">You can make the diffrence !</h4>
-                  <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
-
-                </div> <!-- /.carousel-caption -->
-
-              </div>
-
-            </div> <!-- /.item -->
 
           </div>
 
@@ -117,6 +100,8 @@
 
     </div><!-- /.carousel -->
 
+
+
     <div class="section-home about-us fadeIn animated">
 
         <div class="container">
@@ -127,16 +112,16 @@
 
                   <div class="about-us-col">
 
-                        <div class="col-icon-wrapper">
-                          <img src="assets/images/icons/our-mission-icon.png" alt="">
-                        </div>
-                        <h3 class="col-title">our mission</h3>
+                        <%--<div class="col-icon-wrapper">
+                          <img src="assets/images/doc.png" alt="">
+                        </div>--%>
+                        <h3 class="col-title">Our team</h3>
                         <div class="col-details">
 
-                          <p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet consect</p>
+                          <p>Choose from variety of top doctors </p>
 
                         </div>
-                        <a href="#" class="btn btn-primary"> Read more </a>
+                        <a href="doctors.jsp" class="btn btn-primary"> Read more </a>
 
                   </div>
 
@@ -147,16 +132,16 @@
 
                   <div class="about-us-col">
 
-                        <div class="col-icon-wrapper">
-                          <img src="assets/images/icons/make-donation-icon.png" alt="">
-                        </div>
-                        <h3 class="col-title">Make donations</h3>
+                        <%--<div class="col-icon-wrapper">
+                          <img src="assets/images/list.png" alt="">
+                        </div>--%>
+                        <h3 class="col-title">Our services</h3>
                         <div class="col-details">
 
-                          <p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet consect</p>
+                          <p>Chose from variety of services</p>
 
                         </div>
-                        <a href="#" class="btn btn-primary"> Read more </a>
+                        <a href="services.jsp" class="btn btn-primary"> Read more </a>
 
                   </div>
 
@@ -167,16 +152,16 @@
 
                   <div class="about-us-col">
 
-                        <div class="col-icon-wrapper">
-                          <img src="assets/images/icons/help-icon.png" alt="">
-                        </div>
-                        <h3 class="col-title">Help & support</h3>
+                       <%-- <div class="col-icon-wrapper">
+                          <img src="assets/images/twitter.png" alt="">
+                        </div>--%>
+                        <h3 class="col-title">Follow us twitter</h3>
                         <div class="col-details">
 
-                          <p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet consect</p>
+                          <p>Follow our profiles with many fresh information and current discounts </p>
 
                         </div>
-                        <a href="#" class="btn btn-primary"> Read more </a>
+                        <a href="#" class="btn btn-primary"> Follow </a>
 
                   </div>
 
@@ -187,16 +172,16 @@
 
                   <div class="about-us-col">
 
-                        <div class="col-icon-wrapper">
-                          <img src="assets/images/icons/programs-icon.png" alt="">
-                        </div>
-                        <h3 class="col-title">our programs</h3>
+                        <%--<div class="col-icon-wrapper">
+                          <img src="assets/images/phone.png" alt="">
+                        </div>--%>
+                        <h3 class="col-title">Contact us</h3>
                         <div class="col-details">
 
-                          <p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet consect</p>
+                          <p>Contact us from Monday to Saturday 7am - 6pm </p>
 
                         </div>
-                        <a href="#" class="btn btn-primary"> Read more </a>
+                        <a href="contact.jsp" class="btn btn-primary"> Read more </a>
 
                   </div>
 

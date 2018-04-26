@@ -20,7 +20,7 @@ public class CartDetail implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    BigDecimal amount;
+
     BigDecimal price;
 
     //DB relations

@@ -1,4 +1,6 @@
-<%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="main.java.app.user.User" %>
+<%@ page import="main.java.app.user.UserRepo" %><%--
   Created by IntelliJ IDEA.
   User: chris
   Date: 24.04.2018
@@ -6,8 +8,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-
+<%
+    User userCookie = UserRepo.getUserCookie(request.getCookies());
+    if (userCookie != null){
+        pageContext.setAttribute("user", userCookie);
+    }
+    Object i = application.getAttribute("i");
+    if(i==null){
+        application.setAttribute("i",1);
+    } else {
+        application.setAttribute("i", (int)i+1);
+    }
+    pageContext.setAttribute("i", application.getAttribute("i"));
+%>
 
 <header class="main-header">
 
@@ -49,7 +62,7 @@
 
 
                     <h2 class="footer-title" href="index.jsp">Medical + Clinic<span class="title-under"></span></h2>
-                   <%-- <img src="assets/images/logo.png" alt="">--%>
+                    <%-- <img src="assets/images/logo.png" alt="">--%>
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse pull-right">
@@ -59,19 +72,20 @@
                         <li><a class="is-active" href="index.jsp">HOME</a></li>
                         <li><a href="doctors.jsp">PERSONNEL</a></li>
                         <li><a href="doctors.jsp">SERVICES</a></li>
-                       <%-- <li class="has-child"><a href="#">SERVICES</a>
+                        <li class="has-child"><a href="#">PATIENT ZONE</a>
 
                             <ul class="submenu">
-                                <li class="submenu-item"><a href="causes-single.jsp">Single cause </a></li>
-                                <li class="submenu-item"><a href="causes-single.jsp">Single cause </a></li>
-                                <li class="submenu-item"><a href="causes-single.jsp">Single cause </a></li>
+                                <li class="submenu-item"><a href="causes-single.jsp">Orders </a></li>
+                                <li class="submenu-item"><a href="causes-single.jsp">Order history </a></li>
+                                <li class="submenu-item"><a href="causes-single.jsp">Patient data </a></li>
                             </ul>
 
-                        </li>--%>
-                        <li><a href="contact.jsp">CONTACT</a></li>
-                        <li><a href="account.jsp">PATIENT PANEL</a></li>
-                        <li><a href="login.jsp">LOGIN</a></li>
-                        <li><a href="index.jsp">LOGOUT</a></li>
+                        </li>
+                        <c:if test="${user == null}">
+                        <li><a href="login.jsp">LOGIN</a></li></c:if>
+                        <c:if test="${user != null}">
+                            <li><a>${user.firstName}${user.lastName}</a></li>
+                            <li><a href="/logout">LOGOUT</a></li></c:if>
 
                     </ul>
 
@@ -84,5 +98,6 @@
 
     </nav>
 
-</header> <!-- /. main-header -->
+</header>
+<!-- /. main-header -->
 

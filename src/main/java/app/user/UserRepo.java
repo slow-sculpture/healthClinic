@@ -4,6 +4,8 @@ import main.java.app.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import javax.servlet.http.Cookie;
+import java.util.Arrays;
 import java.util.Optional;
 
 public class UserRepo {
@@ -70,5 +72,19 @@ public class UserRepo {
                 session.close();
             }
         }
+    }
+
+    //getting user from cookie
+    public static User getUserCookie(Cookie[] cookies){
+        if(cookies!=null){
+            Optional<Cookie> emailCookie = Arrays.stream(cookies)
+                    .filter(c->c.getName().equals("email"))
+                    .findFirst();
+            if(emailCookie.isPresent()){
+                Optional<User> byEmail = UserRepo.findByEmail(emailCookie.get().getValue());
+                return byEmail.orElse(null);
+            }
+        }
+        return null;
     }
 }
