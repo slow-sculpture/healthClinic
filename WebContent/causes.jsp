@@ -99,9 +99,9 @@
 
                       <ul class="submenu">
                          <li class="submenu-item"><a href="causes.jsp">Causes list </a></li>
-                         <li class="submenu-item"><a href="causes-single.jsp">Single cause </a></li>
-                         <li class="submenu-item"><a href="causes-single.jsp">Single cause </a></li>
-                         <li class="submenu-item"><a href="causes-single.jsp">Single cause </a></li>
+                         <li class="submenu-item"><a href="cart.jsp">Single cause </a></li>
+                         <li class="submenu-item"><a href="cart.jsp">Single cause </a></li>
+                         <li class="submenu-item"><a href="cart.jsp">Single cause </a></li>
                       </ul>
 
                     </li>

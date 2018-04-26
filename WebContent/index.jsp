@@ -155,7 +155,7 @@
                        <%-- <div class="col-icon-wrapper">
                           <img src="assets/images/twitter.png" alt="">
                         </div>--%>
-                        <h3 class="col-title">Follow us twitter</h3>
+                        <h3 class="col-title">Follow us on twitter</h3>
                         <div class="col-details">
 
                           <p>Follow our profiles with many fresh information and current discounts </p>

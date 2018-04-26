@@ -70,21 +70,22 @@
                     <ul class="nav navbar-nav">
 
                         <li><a class="is-active" href="index.jsp">HOME</a></li>
-                        <li><a href="doctors.jsp">PERSONNEL</a></li>
-                        <li><a href="doctors.jsp">SERVICES</a></li>
+                        <li><a href="/doctors.jsp">PERSONNEL</a></li>
+                        <li><a href="/services.jsp">SERVICES</a></li>
                         <li class="has-child"><a href="#">PATIENT ZONE</a>
 
                             <ul class="submenu">
-                                <li class="submenu-item"><a href="causes-single.jsp">Orders </a></li>
-                                <li class="submenu-item"><a href="causes-single.jsp">Order history </a></li>
-                                <li class="submenu-item"><a href="causes-single.jsp">Patient data </a></li>
+                                <li class="submenu-item"><a href="/cart.jsp">Cart </a></li>
+                                <li class="submenu-item"><a href="/orderHistory.jsp">Order history </a></li>
+                                <li class="submenu-item"><a href="/userAccount.jsp">Patient data </a></li>
                             </ul>
 
                         </li>
                         <c:if test="${user == null}">
                         <li><a href="login.jsp">LOGIN</a></li></c:if>
                         <c:if test="${user != null}">
-                            <li><a>${user.firstName}${user.lastName}</a></li>
+                            <li><a><<<>>></a></li>
+                            <li><a>${user.firstName} ${user.lastName}</a></li>
                             <li><a href="/logout">LOGOUT</a></li></c:if>
 
                     </ul>
